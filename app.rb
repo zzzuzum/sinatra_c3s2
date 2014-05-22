@@ -32,11 +32,22 @@ end
 post '/' do
  @name = params[:user_name]
  @age  = params[:user_age].to_i
+ @day  = params[:day].downcase
+ @sex  = params[:sex]
 
- if @age >= 18
-     erb :drink
+ if @day =='tuesday' && @sex=='f' && @age>=18
+     erb :ladies_night_accept
  else
-     erb :no_drink
+ 	if @day =='tuesday' && @sex=='m' 
+		erb :ladies_night_reject
+	else
+		if @day !='tuesday' && @age >= 18 
+			erb :drink
+		else
+			if  @age < 18
+				erb :no_drink
+			end		 
+		end
+	end
  end
-
 end
