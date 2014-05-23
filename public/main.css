@@ -1,0 +1,15 @@
+body {background: url("http://nyulocal.com/wp-content/uploads/2013/02/pub-bar1.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+}
+
+
+label {color: white;}
+
+.container h3 {color: white;}
+.container h1 {color: white;}
+.container p {color: white;}
+
+.control-label {color: white;}
+
+
