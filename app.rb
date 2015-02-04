@@ -11,6 +11,7 @@ get '/' do
 end
 
 post '/' do
+  #raise params.inspect
   name = params[:user_name]
   age  = params[:user_age].to_i # to_i converts the string "5" to the integer 5 
 
@@ -25,8 +26,8 @@ post '/' do
   output
 end
 
-# get '/' do
-#   erb :form
+#get '/' do
+#  erb :form
 # end
 
 # post '/' do
